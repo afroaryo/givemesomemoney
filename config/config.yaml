@@ -1,0 +1,87 @@
+# Path related
+dataset_path: data/raw/gmsc.csv
+dataset_cleaned_path: data/processed/raw_dataset.pkl
+train_set_path:
+- data/processed/x_train.pkl
+- data/processed/y_train.pkl
+valid_set_path:
+- data/processed/x_valid.pkl
+- data/processed/y_valid.pkl
+test_set_path:
+- data/processed/x_test.pkl
+- data/processed/y_test.pkl
+train_feng_set_path:
+- data/processed/x_train_feng.pkl
+- data/processed/y_train_feng.pkl
+valid_feng_set_path:
+- data/processed/x_valid_feng.pkl
+- data/processed/y_valid_feng.pkl
+test_feng_set_path:
+- data/processed/x_test_feng.pkl
+- data/processed/y_test_feng.pkl
+production_model_path: models/production_model.pkl
+# ohe_stasiun_path: models/ohe_stasiun.pkl
+# le_encoder_path: models/le_encoder.pkl
+training_log_path: log/training_log.json
+
+# Debug related
+print_debug: true
+
+# Columns by data type related
+float_columns:
+- RevolvingUtilizationOfUnsecuredLines
+- DebtRatio
+- MonthlyIncome
+int_columns:
+- Age 
+- NumberOfTime30-59DaysPastDueNotWorse
+- NumberOfOpenCreditLinesAndLoans
+- NumberRealEstateLoansOrLines
+- NumberOfDependents
+- SeriousDlqin2yrs
+
+# Predictors and label related
+label: SeriousDlqin2yrs
+predictors:
+- RevolvingUtilizationOfUnsecuredLines
+- DebtRatio
+- MonthlyIncome
+- Age 
+- NumberOfTime30-59DaysPastDueNotWorse
+- NumberOfOpenCreditLinesAndLoans
+- NumberRealEstateLoansOrLines
+- NumberOfDependents
+
+
+# Range of data related
+range_unsecured_lines:
+- 0
+- 100
+range_debt_ratio:
+- 0
+- 100
+range_monthly_income:
+- 0
+- 100000
+range_age:
+- 0
+- 109
+range_59_past_worse:
+- 0
+- 59
+range_open_credit:
+- 0
+- 58
+range_real_estate_loan:
+- 0
+- 10
+range_dependents:
+- 0
+- 5
+range_serious_dlq:
+- 0
+- 1
+
+# Splitting related
+test_size: 0.3
+valid_size: 0.5
